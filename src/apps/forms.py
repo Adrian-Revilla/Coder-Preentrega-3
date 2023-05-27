@@ -3,13 +3,19 @@ from django import forms
 from . import models
 
 
-class AutorForm(forms.ModelForm):
-    class Meta:
-        model = models.Autor
-        fields = "__all__"
+class ConductorForm(forms.ModelForm):
+	class Meta:
+		model = models.Conductor
+		fields = "__all__"
 
 
-class PostForm(forms.ModelForm):
-    class Meta:
-        model = models.Post
-        fields = "__all__"
+class VehiculoForm(forms.ModelForm):
+	class Meta:
+		model = models.Vehiculo
+		fields = "__all__"
+
+
+class ViajesForm(forms.ModelForm):
+	class Meta:
+		model = models.Viajes
+		fields = "__all__"

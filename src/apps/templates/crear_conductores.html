@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body_content %}
+	<form method="post">
+		
+		<div class="form-group p-5">
+		{{ form.as_p }}
+		<button type="submit" class="btn btn-success">Guardar</button>
+		{% csrf_token %}
+		</div>
+	</form>	
+{% endblock body_content %}
