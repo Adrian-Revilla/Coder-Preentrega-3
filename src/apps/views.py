@@ -5,11 +5,19 @@ from django.shortcuts import redirect, render
 from django.urls import reverse, reverse_lazy
 from django.views.generic import DetailView, ListView, TemplateView
 from django.views.generic.edit import CreateView
+from . import models
 
 from . import forms, models
 
 def index(request):
-	return render(request, 'index.html')
+
+	db_data = {
+		'conductores': models.Conductor.objects,
+		'viajes': models.Viajes.objects,
+		'vehiculos': models.Vehiculo.objects,
+	}
+
+	return render(request, 'index.html', context={'data': db_data})
 
 
 

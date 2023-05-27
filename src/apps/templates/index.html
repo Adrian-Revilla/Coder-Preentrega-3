@@ -16,46 +16,21 @@
 	<!-- Page Content-->
 	<section class="pt-4">
 		<div class="container px-lg-5">
-			<!-- Page Features-->
 			<div class="row gx-lg-5">
-				<div class="col-lg-6 col-xxl-4 mb-5">
-					<div class="card  border-0">
-						<div class="card-body p-2 border rounded">
-							<h2 class="fw-bold text-center">Algo 1</h2>
-							<ul>
-								<li>algo n1</li>
-								<li>algo n2</li>
-								<li>algo n3</li>
-							</ul>
+				{% for key, value in data.items %}
+					<div class="col-lg-6 col-xxl-4 mb-5">
+						<div class="card  border-0">
+							<div class="card-body p-2 border rounded">
+								<h2 class="fw-bold text-center">{{key}}</h2>
+								<ul>
+									{% for i in value.all %}
+										<li>{{ i }}</li>
+									{% endfor %}
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-6 col-xxl-4 mb-5">
-					<div class="card  border-0">
-						<div class="card-body p-2 border rounded">
-							<h2 class="fw-bold text-center">Algo 1</h2>
-							<ul>
-								<li>algo n1</li>
-								<li>algo n2</li>
-								<li>algo n3</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-xxl-4 mb-5">
-					<div class="card  border-0">
-						<div class="card-body p-2 border rounded">
-							<h2 class="fw-bold text-center">Algo 1</h2>
-							<ul>
-								<li>algo n1</li>
-								<li>algo n2</li>
-								<li>algo n3</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
+				{% endfor %}
 			</div>
-		</div>
 	</section>
 {% endblock body_content %}
