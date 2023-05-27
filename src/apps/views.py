@@ -12,9 +12,9 @@ from . import forms, models
 def index(request):
 
 	db_data = {
-		'conductores': models.Conductor.objects,
-		'viajes': models.Viajes.objects,
-		'vehiculos': models.Vehiculo.objects,
+		'Conductores 🧑‍💼': models.Conductor.objects,
+		'Viajes 🛣️': models.Viajes.objects,
+		'vehiculos 🚗': models.Vehiculo.objects,
 	}
 
 	return render(request, 'index.html', context={'data': db_data})
